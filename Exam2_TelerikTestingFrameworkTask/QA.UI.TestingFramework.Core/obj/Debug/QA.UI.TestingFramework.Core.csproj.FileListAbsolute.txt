@@ -1,0 +1,12 @@
+D:\TELERIK\GitHub\Repos\QATeamApple\TelerikAcademyAutomatedTests\TestingFramework\QA.UI.TestingFramework.Core\bin\Debug\QA.UI.TestingFramework.Core.dll
+D:\TELERIK\GitHub\Repos\QATeamApple\TelerikAcademyAutomatedTests\TestingFramework\QA.UI.TestingFramework.Core\bin\Debug\QA.UI.TestingFramework.Core.pdb
+D:\TELERIK\GitHub\Repos\QATeamApple\TelerikAcademyAutomatedTests\TestingFramework\QA.UI.TestingFramework.Core\bin\Debug\QA.TelerikAcademy.Core.dll
+D:\TELERIK\GitHub\Repos\QATeamApple\TelerikAcademyAutomatedTests\TestingFramework\QA.UI.TestingFramework.Core\obj\Debug\QA.UI.TestingFramework.Core.csprojResolveAssemblyReference.cache
+D:\TELERIK\GitHub\Repos\QATeamApple\TelerikAcademyAutomatedTests\TestingFramework\QA.UI.TestingFramework.Core\obj\Debug\QA.UI.TestingFramework.Core.dll
+D:\TELERIK\GitHub\Repos\QATeamApple\TelerikAcademyAutomatedTests\TestingFramework\QA.UI.TestingFramework.Core\obj\Debug\QA.UI.TestingFramework.Core.pdb
+D:\TELERIK\EXAM\TelerikTestingFramework\QA.UI.TestingFramework.Core\bin\Debug\QA.UI.TestingFramework.Core.dll
+D:\TELERIK\EXAM\TelerikTestingFramework\QA.UI.TestingFramework.Core\bin\Debug\QA.UI.TestingFramework.Core.pdb
+D:\TELERIK\EXAM\TelerikTestingFramework\QA.UI.TestingFramework.Core\bin\Debug\QA.TelerikAcademy.Core.dll
+D:\TELERIK\EXAM\TelerikTestingFramework\QA.UI.TestingFramework.Core\obj\Debug\QA.UI.TestingFramework.Core.csprojResolveAssemblyReference.cache
+D:\TELERIK\EXAM\TelerikTestingFramework\QA.UI.TestingFramework.Core\obj\Debug\QA.UI.TestingFramework.Core.dll
+D:\TELERIK\EXAM\TelerikTestingFramework\QA.UI.TestingFramework.Core\obj\Debug\QA.UI.TestingFramework.Core.pdb

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebTest Name="NavigateTestTelerikAcademy" Id="ae2d8f58-8970-415f-a6b0-93335ed091b1" Owner="" Priority="2147483647" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="default" StopOnError="False" RecordedResultFile="NavigateTestTelerikAcademy.b79d71f8-a208-4d0e-8c31-c1e4e9cf0ad5.rec.webtestresult" ResultsLocale="">
+  <Items>
+    <Request Method="GET" Guid="a7cfd3bd-83ae-4d7f-b7df-f2d9081d8c91" Version="1.1" Url="http://test.telerikacademy.com/" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0.5" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
+    <Request Method="GET" Guid="0188fa1b-596b-4835-9422-b8224997b05e" Version="1.1" Url="http://test.telerikacademy.com/Home/About" ThinkTime="10" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0.5" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="http://test.telerikacademy.com/" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="ad4fcef1-b4f9-468d-ab75-f3eaab5f5cc4" Version="1.1" Url="http://test.telerikacademy.com/FeedbackReport" ThinkTime="3" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0.5" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="http://test.telerikacademy.com/Home/About" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="a2414583-c090-4f90-8f3d-8726804f9f5b" Version="1.1" Url="http://test.telerikacademy.com/SoftwareAcademy/Candidate" ThinkTime="4" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0.5" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="http://test.telerikacademy.com/Users/Auth/Login?ReturnUrl=%2fSoftwareAcademy%2fCandidate" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="http://test.telerikacademy.com/FeedbackReport" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="df3edaff-a622-40b5-8689-af8e32aff887" Version="1.1" Url="http://test.telerikacademy.com/Users/Auth/Registration" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0.5" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="http://test.telerikacademy.com/Users/Auth/Login?ReturnUrl=%2fSoftwareAcademy%2fCandidate" />
+      </Headers>
+    </Request>
+  </Items>
+  <ValidationRules>
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidateResponseUrl, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response URL" Description="Validates that the response URL after redirects are followed is the same as the recorded response URL.  QueryString parameters are ignored." Level="Low" ExectuionOrder="BeforeDependents" />
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleResponseTimeGoal, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response Time Goal" Description="Validates that the response time for the request is less than or equal to the response time goal as specified on the request.  Response time goals of zero will be ignored." Level="Low" ExectuionOrder="AfterDependents">
+      <RuleParameters>
+        <RuleParameter Name="Tolerance" Value="0" />
+      </RuleParameters>
+    </ValidationRule>
+  </ValidationRules>
+</WebTest>

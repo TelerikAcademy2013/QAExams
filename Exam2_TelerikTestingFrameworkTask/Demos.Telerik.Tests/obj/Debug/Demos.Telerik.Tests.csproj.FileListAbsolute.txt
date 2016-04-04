@@ -1,0 +1,9 @@
+D:\TELERIK\EXAM\TelerikTestingFramework\Demos.Telerik.Tests\obj\Debug\Demos.Telerik.Tests.csprojResolveAssemblyReference.cache
+D:\TELERIK\EXAM\TelerikTestingFramework\Demos.Telerik.Tests\bin\Debug\Demos.Telerik.Tests.dll
+D:\TELERIK\EXAM\TelerikTestingFramework\Demos.Telerik.Tests\bin\Debug\Demos.Telerik.Tests.pdb
+D:\TELERIK\EXAM\TelerikTestingFramework\Demos.Telerik.Tests\bin\Debug\Demos.Telerik.Core.dll
+D:\TELERIK\EXAM\TelerikTestingFramework\Demos.Telerik.Tests\bin\Debug\QA.UI.TestingFramework.Core.dll
+D:\TELERIK\EXAM\TelerikTestingFramework\Demos.Telerik.Tests\bin\Debug\Demos.Telerik.Core.pdb
+D:\TELERIK\EXAM\TelerikTestingFramework\Demos.Telerik.Tests\bin\Debug\QA.UI.TestingFramework.Core.pdb
+D:\TELERIK\EXAM\TelerikTestingFramework\Demos.Telerik.Tests\obj\Debug\Demos.Telerik.Tests.dll
+D:\TELERIK\EXAM\TelerikTestingFramework\Demos.Telerik.Tests\obj\Debug\Demos.Telerik.Tests.pdb

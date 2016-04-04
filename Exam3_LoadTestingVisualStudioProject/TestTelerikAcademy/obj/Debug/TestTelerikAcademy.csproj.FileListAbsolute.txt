@@ -1,0 +1,10 @@
+D:\TELERIK\DATA\QAExam\TestTelerikAcademy\bin\Debug\TestTelerikAcademy.dll
+D:\TELERIK\DATA\QAExam\TestTelerikAcademy\bin\Debug\TestTelerikAcademy.pdb
+D:\TELERIK\DATA\QAExam\TestTelerikAcademy\obj\Debug\TestTelerikAcademy.csprojResolveAssemblyReference.cache
+D:\TELERIK\DATA\QAExam\TestTelerikAcademy\obj\Debug\TestTelerikAcademy.dll
+D:\TELERIK\DATA\QAExam\TestTelerikAcademy\obj\Debug\TestTelerikAcademy.pdb
+D:\TELERIK\DATA\QAExam\TestTelerikAcademy\bin\Debug\Task1NavigateTest\NavigateTestTelerikAcademy.webtest
+D:\TELERIK\DATA\QAExam\TestTelerikAcademy\bin\Debug\Task1NavigateTest\NavigateWithLoadPattern20Users.loadtest
+D:\TELERIK\DATA\QAExam\TestTelerikAcademy\bin\Debug\Task1NavigateTest\NavigateWithConstant20Users.loadtest
+D:\TELERIK\DATA\QAExam\TestTelerikAcademy\bin\Debug\Task2DataDrivenTest\DataDrivenLoginLogoutWith3Users.webtest
+D:\TELERIK\DATA\QAExam\TestTelerikAcademy\bin\Debug\Task2DataDrivenTest\DataDrivenLoginLogoutWithConstant10Users.loadtest

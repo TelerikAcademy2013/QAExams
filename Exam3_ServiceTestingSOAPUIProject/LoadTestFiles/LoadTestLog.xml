@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LoadTestLog>
+  <entry>
+    <discarded>false</discarded>
+    <error>false</error>
+    <message>LoadTest started at Mon Nov 24 18:21:20 EET 2014</message>
+    <timeStamp>1416846080653</timeStamp>
+    <type>Message</type>
+  </entry>
+  <entry>
+    <discarded>false</discarded>
+    <error>false</error>
+    <message>LoadTest ended at Mon Nov 24 18:23:20 EET 2014</message>
+    <timeStamp>1416846200745</timeStamp>
+    <type>Message</type>
+  </entry>
+</LoadTestLog>

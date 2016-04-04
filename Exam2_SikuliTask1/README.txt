@@ -1,0 +1,1 @@
+Delete circle_image.png form smoke_tests.sikuli folder

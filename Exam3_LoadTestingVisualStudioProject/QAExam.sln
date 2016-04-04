@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30110.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestTelerikAcademy", "TestTelerikAcademy\TestTelerikAcademy.csproj", "{09F0CEB1-962E-449A-BD8C-77465BEC832C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BDE5D6EB-4DF9-4FEC-B03C-6227B7D2261E}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{09F0CEB1-962E-449A-BD8C-77465BEC832C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09F0CEB1-962E-449A-BD8C-77465BEC832C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09F0CEB1-962E-449A-BD8C-77465BEC832C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09F0CEB1-962E-449A-BD8C-77465BEC832C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

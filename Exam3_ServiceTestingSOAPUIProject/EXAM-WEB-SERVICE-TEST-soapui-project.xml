@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="369ee940-a95b-4d6a-8e7e-ac0ea26b9899" activeEnvironment="Default" name="EXAM_WEB_SERVICE_TEST" resourceRoot="" soapui-version="5.1.2" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="3f83482c-f08e-4afc-b9f2-80718075d423" wsaVersion="NONE" name="ArticleServicePTBinding" type="wsdl" bindingName="{http://predic8.com/wsdl/material/ArticleService/1/}ArticleServicePTBinding" soapVersion="1_1" anonymous="optional" definition="http://www.predic8.com:8080/material/ArticleService?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://www.predic8.com:8080/material/ArticleService?wsdl"><con:part><con:url>http://www.predic8.com:8080/material/ArticleService?wsdl</con:url><con:content><![CDATA[<!--Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2.7-b01  svn-revision#.-->
+<definitions targetNamespace="http://predic8.com/wsdl/material/ArticleService/1/" name="article" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://predic8.com/wsdl/material/ArticleService/1/" xmlns:ns="http://predic8.com/material/1/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://predic8.com/material/1/" xmlns:ns2="http://predic8.com/common/1/">
+  <types>
+    <xsd:schema targetNamespace="http://predic8.com/wsdl/material/ArticleService/1/">
+      <xsd:import schemaLocation="http://www.predic8.com:8080/material/ArticleService?xsd=2" namespace="http://predic8.com/material/1/"/>
+      <xsd:import schemaLocation="http://www.predic8.com:8080/material/ArticleService?xsd=1" namespace="http://predic8.com/common/1/"/>
+      <xsd:element name="createResponse" type="tns:CreateResponseType"/>
+      <xsd:complexType name="CreateResponseType">
+        <xsd:sequence>
+          <xsd:element name="id" type="ns2:IdentifierType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="create" type="tns:CreateType"/>
+      <xsd:complexType name="CreateType">
+        <xsd:sequence>
+          <xsd:element name="article" type="ns1:ArticleType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="get" type="tns:GetType"/>
+      <xsd:complexType name="GetType">
+        <xsd:sequence>
+          <xsd:element name="id" type="ns2:IdentifierType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="getResponse" type="tns:GetResponseType"/>
+      <xsd:complexType name="GetResponseType">
+        <xsd:sequence>
+          <xsd:element name="article" type="ns1:ArticleType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="getAll" type="tns:GetAllType"/>
+      <xsd:complexType name="GetAllType">
+        <xsd:sequence></xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="getAllResponse" type="tns:GetAllResponseType"/>
+      <xsd:complexType name="GetAllResponseType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="article" maxOccurs="unbounded" type="ns1:ArticleType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="delete" type="tns:DeleteType"/>
+      <xsd:complexType name="DeleteType">
+        <xsd:sequence>
+          <xsd:element name="id" type="ns2:IdentifierType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="deleteResponse">
+        <xsd:complexType>
+          <xsd:sequence/>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </types>
+  <message name="createRequest">
+    <part name="parameters" element="tns:create"/>
+  </message>
+  <message name="createResponse">
+    <part name="parameters" element="tns:createResponse"/>
+  </message>
+  <message name="getRequest">
+    <part name="parameters" element="tns:get"/>
+  </message>
+  <message name="getResponse">
+    <part name="parameters" element="tns:getResponse"/>
+  </message>
+  <message name="getAllRequest">
+    <part name="parameters" element="tns:getAll"/>
+  </message>
+  <message name="getAllResponse">
+    <part name="parameters" element="tns:getAllResponse"/>
+  </message>
+  <message name="deleteRequest">
+    <part name="parameters" element="tns:delete"/>
+  </message>
+  <message name="deleteResponse">
+    <part name="parameters" element="tns:deleteResponse"/>
+  </message>
+  <portType name="ArticleServicePT">
+    <documentation>Interface provided by this Service</documentation>
+    <operation name="create">
+      <input name="input1" message="tns:createRequest"/>
+      <output name="output1" message="tns:createResponse"/>
+    </operation>
+    <operation name="get">
+      <input name="input2" message="tns:getRequest"/>
+      <output name="output2" message="tns:getResponse"/>
+    </operation>
+    <operation name="getAll">
+      <input name="input3" message="tns:getAllRequest"/>
+      <output name="output3" message="tns:getAllResponse"/>
+    </operation>
+    <operation name="delete">
+      <input name="input4" message="tns:deleteRequest"/>
+      <output name="output4" message="tns:deleteResponse"/>
+    </operation>
+  </portType>
+  <wsdl:binding name="ArticleServicePTBinding" type="tns:ArticleServicePT">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="create">
+      <soap:operation soapAction="create_action"/>
+      <wsdl:input name="input1">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="output1">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get">
+      <soap:operation soapAction="get_action"/>
+      <wsdl:input name="input2">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="output2">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAll">
+      <soap:operation soapAction="getAll_action"/>
+      <wsdl:input name="input3">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="output3">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="delete">
+      <soap:operation soapAction="delete_action"/>
+      <wsdl:input name="input4">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="output4">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ArticleService">
+    <wsdl:port name="ArticleServicePTPort" binding="tns:ArticleServicePTBinding">
+      <soap:address location="http://www.predic8.com:8080/material/ArticleService"/>
+    </wsdl:port>
+  </wsdl:service>
+</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://www.predic8.com:8080/material/ArticleService?xsd=2</con:url><con:content><![CDATA[<!--Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2.7-b01  svn-revision#.-->
+<xsd:schema targetNamespace="http://predic8.com/material/1/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://predic8.com/material/1/" xmlns:ns0="http://predic8.com/common/1/">
+  <xsd:import schemaLocation="http://www.predic8.com:8080/material/ArticleService?xsd=1" namespace="http://predic8.com/common/1/"/>
+  <xsd:complexType name="ArticleType">
+    <xsd:sequence>
+      <xsd:element name="name" type="xsd:string"/>
+      <xsd:element name="description" type="xsd:string"/>
+      <xsd:element name="price" type="ns0:MoneyType"/>
+      <xsd:element name="id" type="ns0:IdentifierType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://www.predic8.com:8080/material/ArticleService?xsd=1</con:url><con:content><![CDATA[<!--Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2.7-b01  svn-revision#.-->
+<xsd:schema targetNamespace="http://predic8.com/common/1/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://predic8.com/common/1/">
+  <xsd:annotation>
+    <xsd:documentation>Common datatypes that are used in different systems.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:include schemaLocation="http://www.predic8.com:8080/material/ArticleService?xsd=3"/>
+  <xsd:simpleType name="IdentifierType">
+    <xsd:annotation>
+      <xsd:documentation>Identifier for business objects.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="[A-Z]{2}-\d{5}"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="PersonType">
+    <xsd:sequence>
+      <xsd:element name="id" type="tns:IdentifierType"/>
+      <xsd:element name="firstName" type="xsd:string"/>
+      <xsd:element name="lastName" type="xsd:string"/>
+      <xsd:element name="address" type="tns:AddressType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="AddressType">
+    <xsd:sequence>
+      <xsd:element name="street" type="xsd:string"/>
+      <xsd:element name="city" type="xsd:string"/>
+      <xsd:element name="zipCode" type="xsd:string"/>
+      <xsd:element name="country" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://www.predic8.com:8080/material/ArticleService?xsd=3</con:url><con:content><![CDATA[<!--Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2.7-b01  svn-revision#.-->
+<xsd:schema targetNamespace="http://predic8.com/common/1/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://predic8.com/common/1/">
+  <xsd:complexType name="MoneyType">
+    <xsd:sequence>
+      <xsd:element name="amount" type="xsd:decimal"/>
+      <xsd:element name="currency" type="tns:CurrencyType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="CurrencyType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="EUR"/>
+      <xsd:enumeration value="USD"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://www.predic8.com:8080/material/ArticleService</con:endpoint></con:endpoints><con:operation id="2835320d-4bdb-474c-869e-627e8a7555c1" isOneWay="false" action="create_action" name="create" bindingOperationName="create" type="Request-Response" outputName="output1" inputName="input1" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e059c552-8d6c-4db8-9659-6044c6d67c23" name="ValidCreateRequest"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.predic8.com:8080/material/ArticleService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://predic8.com/wsdl/material/ArticleService/1/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ns:create>
+         <article>
+            <name>TEST ARTICLE</name>
+            <description>some text</description>
+            <price>
+               <amount>1</amount>
+               <currency>EUR</currency>
+            </price>
+            <id>AR-20002</id>
+         </article>
+      </ns:create>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="create_action"/><con:wsrmConfig version="1.2"/></con:call><con:call id="8d1e0100-fbca-45e4-a4b7-77ca5f1de2ee" name="InvalidCreateRequest"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.predic8.com:8080/material/ArticleService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://predic8.com/wsdl/material/ArticleService/1/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ns:create>
+         <article>
+            <name/>
+            <description/>
+            <price>
+               <amount/>
+               <currency/>
+            </price>
+            <id/>
+         </article>
+      </ns:create>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="create_action"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="2866b85f-6ae5-4d19-98fa-ed5b764ea93c" isOneWay="false" action="delete_action" name="delete" bindingOperationName="delete" type="Request-Response" outputName="output4" inputName="input4" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="2246dd3a-2a80-40b1-b9ac-cf6cd06b701f" name="InvalidDeleteRequest"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.predic8.com:8080/material/ArticleService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://predic8.com/wsdl/material/ArticleService/1/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ns:delete>
+         <id>123456</id>
+      </ns:delete>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="delete_action"/><con:wsrmConfig version="1.2"/></con:call><con:call id="5bcbb338-a1ac-4b6b-9549-daf8ee75fb5a" name="ValidDeleteRequest"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.predic8.com:8080/material/ArticleService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://predic8.com/wsdl/material/ArticleService/1/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ns:delete>
+         <id>AR-81773</id>
+      </ns:delete>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="delete_action"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="b8e8b18e-ba95-472d-9042-0da8e8f2ebc2" isOneWay="false" action="get_action" name="get" bindingOperationName="get" type="Request-Response" outputName="output2" inputName="input2" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="273bd625-1d75-4505-a022-85aaf8f53223" name="ValidGetRequest"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.predic8.com:8080/material/ArticleService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://predic8.com/wsdl/material/ArticleService/1/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ns:get>
+         <id>AR-82191</id>
+      </ns:get>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="get_action"/><con:wsrmConfig version="1.2"/></con:call><con:call id="ce8e39e2-33e1-4035-b940-fc68941d1ca8" name="InvalidGetRequest"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.predic8.com:8080/material/ArticleService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://predic8.com/wsdl/material/ArticleService/1/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ns:get>
+         <id>123456</id>
+      </ns:get>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="get_action"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="bcdef5ed-b3a6-4935-82d3-5259eb9ceef5" isOneWay="false" action="getAll_action" name="getAll" bindingOperationName="getAll" type="Request-Response" outputName="output3" inputName="input3" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="b4d41558-96b4-46ef-b9e9-f53942c6b493" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.predic8.com:8080/material/ArticleService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://predic8.com/wsdl/material/ArticleService/1/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ns:getAll/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="getAll_action"/></con:call></con:operation></con:interface><con:testSuite id="80ef1f16-f237-4834-bc9c-d5f6e0d70213" name="TestCreateGetAndDelete"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="c9e08e94-2318-4dd7-aedb-286726d43da4" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="CreateArticle" searchProperties="true"><con:settings/><con:testStep type="request" name="CreateNewArticle" id="0e3fd8c8-61fc-4cb2-a136-5225d8072538"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ArticleServicePTBinding</con:interface><con:operation>create</con:operation><con:request name="CreateNewArticle" id="782d2d0a-a82b-492d-a54a-45dcd017eaab"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.predic8.com:8080/material/ArticleService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://predic8.com/wsdl/material/ArticleService/1/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ns:create>
+         <article>
+            <name>TEST NEW ARTICLE</name>
+            <description>SOME TEXT</description>
+            <price>
+               <amount>1</amount>
+               <currency>EUR</currency>
+            </price>
+            <id>AR-10001</id>
+         </article>
+      </ns:create>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="8e465c37-5985-4913-823d-f2a494dc1193"/><con:assertion type="Simple Contains" id="f246a6ef-75d8-4929-9574-9d16270b16e9" name="CheckCreateResponseID"><con:configuration><token>AR-</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase><con:testCase id="7accf214-fac7-4deb-8799-ac4dd20ecb16" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetArticle" searchProperties="true"><con:settings/><con:testStep type="request" name="CreateNewArticle" id="65e6ca3e-dfef-4f09-89e8-277a961300cc"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ArticleServicePTBinding</con:interface><con:operation>create</con:operation><con:request name="CreateNewArticle" id="8fede52d-713e-4a7f-81fc-82fc83801bab"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.predic8.com:8080/material/ArticleService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://predic8.com/wsdl/material/ArticleService/1/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ns:create>
+         <article>
+            <name>TEST NEW ARTICLE</name>
+            <description>SOME TEXT</description>
+            <price>
+               <amount>1</amount>
+               <currency>EUR</currency>
+            </price>
+            <id>AR-20002</id>
+         </article>
+      </ns:create>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="a270f63e-dbd9-4e09-a7b6-c26d2768bd24"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="transfer" name="TransferArticleID" id="9ed3d11d-de27-4be5-8eae-2b78f501e5e2"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>ArticleID</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>CreateNewArticle</con:sourceStep><con:sourcePath>declare namespace ns2='http://predic8.com/wsdl/material/ArticleService/1/';
+//ns2:createResponse[1]/id[1]</con:sourcePath><con:targetType>Request</con:targetType><con:targetStep>GetNewArticle</con:targetStep><con:targetPath>declare namespace ns='http://predic8.com/wsdl/material/ArticleService/1/';
+//ns:get[1]/id[1]</con:targetPath><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="request" name="GetNewArticle" id="edc69c69-4e6b-456b-b30c-1af962ac3c47"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ArticleServicePTBinding</con:interface><con:operation>get</con:operation><con:request name="GetNewArticle" id="8b7ef7c8-c055-4da4-b4b1-3ec310083e68"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.predic8.com:8080/material/ArticleService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://predic8.com/wsdl/material/ArticleService/1/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ns:get>
+         <id>AR-82469</id>
+      </ns:get>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="589d471a-3ce3-4ec2-a42e-1be3bce9040d"/><con:assertion type="XPath Match" id="44e3f9b2-01a3-405f-9a27-443c358b0b8b" name="CheckArticleName"><con:configuration><path>declare namespace ns2='http://predic8.com/wsdl/material/ArticleService/1/';
+//ns2:getResponse[1]/article[1]/name[1]</path><content>TEST NEW ARTICLE</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="XPath Match" id="7e83b390-c628-4b3b-9a12-ffbb35d95cf4" name="CheckArticlePrice"><con:configuration><path>declare namespace ns2='http://predic8.com/wsdl/material/ArticleService/1/';
+//ns2:getResponse[1]/article[1]/price[1]/amount[1]</path><content>1</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="XPath Match" id="438c7998-b30f-4af9-85ef-ab40716a11b7" name="CheckArticleDescription"><con:configuration><path>declare namespace ns2='http://predic8.com/wsdl/material/ArticleService/1/';
+//ns2:getResponse[1]/article[1]/description[1]</path><content>SOME TEXT</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:loadTest id="2f4f21b1-7c53-4a04-a2e8-f8098986c611" name="GetArticleScenario10Users"><con:settings><con:setting id="HttpSettings@close-connections">false</con:setting><con:setting id="FlowLayout">false</con:setting><con:setting id="ErrorDetails">true</con:setting></con:settings><con:threadCount>10</con:threadCount><con:startDelay>0</con:startDelay><con:sampleInterval>250</con:sampleInterval><con:calculateTPSOnTimePassed>true</con:calculateTPSOnTimePassed><con:resetStatisticsOnThreadCountChange>true</con:resetStatisticsOnThreadCountChange><con:historyLimit>-1</con:historyLimit><con:testLimit>120</con:testLimit><con:limitType>TIME</con:limitType><con:loadStrategy><con:type>Simple</con:type></con:loadStrategy><con:assertion type="Step Status" name="Step Status"/><con:maxAssertionErrors>100</con:maxAssertionErrors><con:cancelExcessiveThreads>true</con:cancelExcessiveThreads><con:strategyInterval>500</con:strategyInterval><con:reportParameters/></con:loadTest><con:properties/><con:reportParameters/></con:testCase><con:testCase id="1d9a34a9-df7d-48f3-93fa-792fd8b3cf20" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="DeleteArticle" searchProperties="true"><con:settings/><con:testStep type="request" name="CreateNewArticle" id="ea7f79d2-12bf-4bf3-9178-0da184780c36"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ArticleServicePTBinding</con:interface><con:operation>create</con:operation><con:request name="CreateNewArticle" id="c1ababc9-454c-4c9f-ab32-ccf886e3546b"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.predic8.com:8080/material/ArticleService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://predic8.com/wsdl/material/ArticleService/1/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ns:create>
+         <article>
+            <name>TEST NEW ARTICLE</name>
+            <description>SOME TEXT</description>
+            <price>
+               <amount>1</amount>
+               <currency>EUR</currency>
+            </price>
+            <id>AR-30003</id>
+         </article>
+      </ns:create>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="27157468-c8fc-4eae-ae15-a8130c798031"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="transfer" name="TransferArticleID" id="8cb58595-3c60-48e0-8d19-6066f42c47f8"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>TransferArticleID</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>CreateNewArticle</con:sourceStep><con:sourcePath>declare namespace ns2='http://predic8.com/wsdl/material/ArticleService/1/';
+//ns2:createResponse[1]/id[1]</con:sourcePath><con:targetType>Request</con:targetType><con:targetStep>DeleteNewArticle</con:targetStep><con:targetPath>declare namespace ns='http://predic8.com/wsdl/material/ArticleService/1/';
+//ns:delete[1]/id[1]</con:targetPath><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="request" name="DeleteNewArticle" id="616aae8e-6972-427c-bb71-7f7686681112"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ArticleServicePTBinding</con:interface><con:operation>delete</con:operation><con:request name="DeleteNewArticle" id="19472519-25b3-4868-8a23-7e808df27a14"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.predic8.com:8080/material/ArticleService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://predic8.com/wsdl/material/ArticleService/1/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ns:delete>
+         <id>AR-82480</id>
+      </ns:delete>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="833fa039-6a56-4cc6-be9c-91f5fc178775"/><con:assertion type="XPath Match" id="418d77a5-8095-4969-93d5-9f625130e354" name="IsDeleteSuccessful"><con:configuration><path>declare namespace ns2='http://predic8.com/wsdl/material/ArticleService/1/';
+//ns2:deleteResponse[1]</path><content>&lt;ns2:deleteResponse xmlns:ns2="http://predic8.com/wsdl/material/ArticleService/1/" xmlns:S="http://schemas.xmlsoap.org/soap/envelope/"/></content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase><con:testCase id="f3b54349-d037-4311-9cd3-e6ae32e35442" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="CreateGetAndDeleteArticle" searchProperties="true"><con:settings/><con:testStep type="request" name="CreateNewArticle" id="7a2e2e5a-4216-46b2-a64d-7b2dd029024d"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ArticleServicePTBinding</con:interface><con:operation>create</con:operation><con:request name="CreateNewArticle" id="b5c5f48b-4efb-4098-a3c8-9bc5078b6d7d"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.predic8.com:8080/material/ArticleService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://predic8.com/wsdl/material/ArticleService/1/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ns:create>
+         <article>
+            <name>TEST NEW ARTICLE</name>
+            <description>SOME TEXT</description>
+            <price>
+               <amount>1</amount>
+               <currency>EUR</currency>
+            </price>
+            <id>AR-40004</id>
+         </article>
+      </ns:create>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="5400e288-467e-4085-8738-2abdcccaaa1a"/><con:assertion type="Simple Contains" id="f5b9d730-1b4f-4a53-9913-de0a28644435" name="Contains"><con:configuration><token>AR-</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="transfer" name="TransferArticleID" id="258f9236-2771-4561-a4aa-ea313ee3f58b"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>TransferArticleIDToGET</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>CreateNewArticle</con:sourceStep><con:sourcePath>declare namespace ns2='http://predic8.com/wsdl/material/ArticleService/1/';
+//ns2:createResponse[1]/id[1]</con:sourcePath><con:targetType>Request</con:targetType><con:targetStep>GetNewArticleByID</con:targetStep><con:targetPath>declare namespace ns='http://predic8.com/wsdl/material/ArticleService/1/';
+//ns:get[1]/id[1]</con:targetPath><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>TransferArticleIDToDELETE</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>CreateNewArticle</con:sourceStep><con:sourcePath>declare namespace ns2='http://predic8.com/wsdl/material/ArticleService/1/';
+//ns2:createResponse[1]/id[1]</con:sourcePath><con:targetType>Request</con:targetType><con:targetStep>DeleteNewArticleByID</con:targetStep><con:targetPath>declare namespace ns='http://predic8.com/wsdl/material/ArticleService/1/';
+//ns:delete[1]/id[1]</con:targetPath><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="request" name="GetNewArticleByID" id="3f9d978d-d8ec-405b-866f-ee92c2b65fcb"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ArticleServicePTBinding</con:interface><con:operation>get</con:operation><con:request name="GetNewArticleByID" id="39a907db-d094-476e-b08c-0371a3e9d918"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.predic8.com:8080/material/ArticleService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://predic8.com/wsdl/material/ArticleService/1/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ns:get>
+         <id>AR-82505</id>
+      </ns:get>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="f059d37e-929d-40a9-b62a-47c5ac7ec859"/><con:assertion type="XPath Match" id="69d83a52-cae3-44ca-a849-d38c4c152024" name="CheckArticleName"><con:configuration><path>declare namespace ns2='http://predic8.com/wsdl/material/ArticleService/1/';
+//ns2:getResponse[1]/article[1]/name[1]</path><content>TEST NEW ARTICLE</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="XPath Match" id="7bfc754f-b716-4479-b770-dc0e709931c4" name="CheckArticleDescription"><con:configuration><path>declare namespace ns2='http://predic8.com/wsdl/material/ArticleService/1/';
+//ns2:getResponse[1]/article[1]/description[1]</path><content>SOME TEXT</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="DeleteNewArticleByID" id="c6b8aec9-0ce7-4efe-a1f9-1c4cca3bc0c2"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ArticleServicePTBinding</con:interface><con:operation>delete</con:operation><con:request name="DeleteNewArticleByID" id="50e7f1ff-209e-49e0-99bb-27acc01d34d1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.predic8.com:8080/material/ArticleService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://predic8.com/wsdl/material/ArticleService/1/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ns:delete>
+         <id>AR-82505</id>
+      </ns:delete>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="c5cc8a34-2bdb-4d2b-bbc9-6ab297eb83dc"/><con:assertion type="XPath Match" id="fa51c461-75e7-45c2-89a4-5968158aea35" name="CheckIsDeleted"><con:configuration><path>declare namespace ns2='http://predic8.com/wsdl/material/ArticleService/1/';
+//ns2:deleteResponse[1]</path><content>&lt;ns2:deleteResponse xmlns:ns2="http://predic8.com/wsdl/material/ArticleService/1/" xmlns:S="http://schemas.xmlsoap.org/soap/envelope/"/></content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase><con:properties/><con:reportParameters/></con:testSuite><con:requirements/><con:properties/><con:wssContainer/><con:databaseConnectionContainer/><con:oAuth2ProfileContainer/><con:reporting><con:reportTemplates/><con:xmlTemplates/><con:parameters/></con:reporting></con:soapui-project>
